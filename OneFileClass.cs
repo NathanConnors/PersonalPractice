@@ -10,7 +10,33 @@ namespace OneFileClass
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("This test works!");
+			// Default constructor call
+			MyClass c1 = new MyClass();
+			c1.getInt();
+			
+			// Non-default constructor call
+			MyClass c2 = new MyClass(4);
+			c2.getInt();
+		}
+	}
+	
+	class MyClass
+	{
+		public int myInt;
+		
+		public MyClass()
+		{
+			myInt = 1;
+		}
+		
+		public MyClass(int myInt)
+		{
+			this.myInt = myInt;
+		}
+		
+		public void getInt()
+		{
+			Console.WriteLine(myInt);
 		}
 	}
 }
